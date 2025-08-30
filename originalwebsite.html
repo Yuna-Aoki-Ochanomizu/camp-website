@@ -11,23 +11,49 @@
       max-width: 700px;
       height: auto;   
     }
+    #everyone {
+      margin: 20px;
+    }
+
+    #everypne input {
+      width: 200px;
+    }
   </style>
 </head>
 <body>
 
+    <main class="container">
 <h1>今日のおやつ</h1>
 
 <img src="today.jpg" alt="おやつのドーナツ">
 
-<p>私はチョコドーナツにピンクのハートがついているドーナツを食べました！</p>
-
-<p>皆さんは何を食べましたか？</p>
+<p>私はピンクのハートがついているチョコドーナツを食べました！</p>
 
 
+<div id="everyone">
+    <label for="everyoneField">皆さんはどのドーナツを食べましたか？: </label>
+    <input type="text"  id="everyoneField">
+    <input type="submit" value="食べたドーナツを入力" id="everyoneSubmit">
+    <p id="everyoneResult"></p>
+  </div>
 
+</main>
 
-
-
+<script>
+    
+    let everyoneField = document.querySelector('#everyoneField');
+  
+    let everyoneSubmit = document.querySelector('#everyoneSubmit');
+  
+    let everyoneResult = document.querySelector('#everyoneResult');
+  
+    function checkeveryone() {
+      
+        everyoneResult.textContent = '美味しそうですね！';
+      }
+    
+    everyoneSubmit.addEventListener('click', checkeveryone);
+  </script>
 
 </body>
 </html>
